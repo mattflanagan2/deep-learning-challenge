@@ -85,11 +85,27 @@ The nonprofit foundation Alphabet Soup requires a tool to aid in selecting appli
 <img width="1388" alt="Screenshot 2024-04-25 at 4 54 19 PM" src="https://github.com/mattflanagan2/deep-learning-challenge/assets/146908072/47241f85-937e-46dd-9993-037ee9680bf9">
 
 
-### Step 4: Write a Report
-* Provide an overview of the analysis.
-* Address data preprocessing and model compilation, training, and evaluation.
-* Summarize the model's performance and suggest improvements.
+### Step 4: Report on the Neural Network Model
+#### Overview of the analysis.
+ The purpose of this analysis is to develop a predictive model leveraging machine learning techniques to assist Alphabet Soup, a nonprofit foundation, in selecting funding applicants with the highest likelihood of success. By utilizing neural networks and preprocessing a comprehensive dataset containing organizational metadata, the goal is to create a binary classifier that can effectively predict whether funded organizations will utilize the money effectively. Ultimately, this analysis aims to enhance Alphabet Soup's decision-making process, enabling more efficient allocation of resources and maximizing the impact of their funding initiatives.
 
+#### Results
+##### Data Preprocessing
+ * Target Variable: IS_SUCCESSFUL
+ * Feature Variable: All other columns
+ * Columns that should be removed are the name and EIN columns as they are not needed for the evaluation of funding outcomes
+
+##### Compiling, Training, and Evaluating the Model
+* How many neurons, layers, and activation functions did you select for your neural network model, and why?
+ I utilized three layers, an input, hidden layer, and output layer. I utilized 43 as the input value as there are 43 different columns. The first layer had 80 neurons, the second had 30, and the final had 1. 
+* Were you able to achieve the target model performance?
+  I was unable to achieve target model performance of over 75% in all three of my attempts. For my model, I opted for a structured approach, employing three layers: an input layer, a hidden layer, and an output layer. Given the dataset's complexity with 43 distinct columns, I set the input layer to accommodate this breadth of features. In the hidden layers, I strategically distributed neurons, selecting 80 neurons for the first layer, 30 for the second, and a single neuron for the output layer, aiming to balance model complexity and predictive power.  I aimed to ensure that the model could effectively learn from the diverse set of input variables. By strategically allocating neurons across layers, I sought to create a network architecture capable of capturing both high-level and nuanced patterns in the data, thus enhancing the model's predictive capacity.
+  
+* What steps did you take in your attempts to increase model performance?
+  During my experimentation, I explored configurations with 4-5 layers and adjusted the number of neurons across these layers. This approach was motivated by the intuition that such depth and breadth in the network architecture could potentially enhance the model's accuracy. I also tried creating a bin for the ask_amt column to reduce the amount of data points to analyze.
+  
+* Summarize the model's performance and suggest improvements.
+ All three attempts were unable to achieve target performace, I feel there is overfitting involved, or trying to analyze too much data resulting in noisy data. I feel that the best way forward would be to continue with binning the ask_amt column or adjusting how the model reads that column in some way. 
 
 
 
